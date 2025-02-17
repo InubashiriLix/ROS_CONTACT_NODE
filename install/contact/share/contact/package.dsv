@@ -1,8 +1,0 @@
-source;share/contact/hook/cmake_prefix_path.ps1
-source;share/contact/hook/cmake_prefix_path.dsv
-source;share/contact/hook/cmake_prefix_path.sh
-source;share/contact/local_setup.bash
-source;share/contact/local_setup.dsv
-source;share/contact/local_setup.ps1
-source;share/contact/local_setup.sh
-source;share/contact/local_setup.zsh
