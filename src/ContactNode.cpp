@@ -56,7 +56,7 @@ public:
                       std::placeholders::_1));
 
     _autoaim_status_sub_ = this->create_subscription<sentry_msgs::msg::AutoAIM>(
-        "/autoaim/target", 10,
+        "/autoaim/target", rclcpp::SensorDataQoS(),
         std::bind(&ContactNode::autoaim_sub_callback, this,
                   std::placeholders::_1));
     // timers
@@ -150,7 +150,7 @@ public:
     // the child_frame_id is the child frame
     transform_stamped.child_frame_id = "robot";
 
-    // WARNING: I don't know whether we can use this   // set the translation
+    // // WARNING: I don't know whether we can use this   // set the translation
     // transform_stamped.transform.translation.x =
 
     // set the rotation
@@ -411,6 +411,8 @@ public:
     comm.tx_struct_.checksum =
         Crc8Append(&tx_packet, sizeof(CommPort::ProjectileTx));
     comm.Write(&tx_packet, sizeof(CommPort::ProjectileTx), true);
+    comm.tx_struct_.pitch = 0;
+    comm.tx_struct_.yaw = 0;
   }
 
 private:
