@@ -4,7 +4,7 @@ project(contact)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+    add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 # find dependencies
@@ -14,6 +14,7 @@ find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(sentry_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(tf2_msgs REQUIRED)
 
 find_package(spdlog REQUIRED)
 
@@ -44,6 +45,7 @@ ament_target_dependencies(
   sentry_msgs
   sensor_msgs
   geometry_msgs
+  tf2_msgs
 )
 
 install(

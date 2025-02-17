@@ -1,8 +1,8 @@
-# Install script for directory: /home/orangepi/GM/nuc/GMaster_project/src/contact
+# Install script for directory: /home/inubashiri/GM/nuc/GMaster_project/src/contact
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/orangepi/GM/nuc/GMaster_project/src/contact/install/contact")
+  set(CMAKE_INSTALL_PREFIX "/home/inubashiri/GM/nuc/GMaster_project/src/contact/install/contact")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -42,19 +42,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/contact" TYPE EXECUTABLE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/contact")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/contact" TYPE EXECUTABLE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/contact")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact"
-         OLD_RPATH "/opt/ros/humble/lib:/root/GM/nuc/GMaster_project/src/sentry_msgs/install/sentry_msgs/lib:"
+         OLD_RPATH "/opt/ros/jazzy/lib:/home/inubashiri/GM/nuc/GMaster_project/src/sentry_msgs/install/sentry_msgs/lib:/home/inubashiri/anaconda3/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/contact/contact")
@@ -62,68 +62,72 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/contact")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/CMakeFiles/contact.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/contact")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/contact")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/contact")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/path.dsv")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.bash")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/environment" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/path.dsv")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.sh")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.zsh")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.dsv")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/package.dsv")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/packages/contact")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_environment_hooks/package.dsv")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_index/share/ament_index/resource_index/packages/contact")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact/cmake" TYPE FILE FILES
-    "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_core/contactConfig.cmake"
-    "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_core/contactConfig-version.cmake"
+    "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_core/contactConfig.cmake"
+    "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/ament_cmake_core/contactConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/orangepi/GM/nuc/GMaster_project/src/contact/package.xml")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/contact" TYPE FILE FILES "/home/inubashiri/GM/nuc/GMaster_project/src/contact/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/serial/lib/cmake_install.cmake")
+  include("/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/serial/lib/cmake_install.cmake")
 
 endif()
 
@@ -135,5 +139,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/orangepi/GM/nuc/GMaster_project/src/contact/build/contact/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/inubashiri/GM/nuc/GMaster_project/src/contact/build/contact/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

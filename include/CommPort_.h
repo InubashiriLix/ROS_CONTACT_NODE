@@ -185,11 +185,12 @@ public:
 
     // the gurgement part (coming from c borad)
     uint8_t shoot_remote;
+    uint8_t armor_color;
     // TODO: WTF is the two things above
     // the current side color (which team we are)
     //
-    // 1 -> red
-    // 2 -> blue
+    // 0 -> red
+    // 1 -> blue
     uint8_t current_side_color;
     // the enemt_hp
     uint16_t enemy_hp[6];

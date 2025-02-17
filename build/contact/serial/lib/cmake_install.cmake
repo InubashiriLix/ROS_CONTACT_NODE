@@ -1,8 +1,8 @@
-# Install script for directory: /home/orangepi/GM/nuc/GMaster_project/src/contact/serial/lib
+# Install script for directory: /home/inubashiri/GM/nuc/GMaster_project/src/contact/serial/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/orangepi/GM/nuc/GMaster_project/src/contact/install/contact")
+  set(CMAKE_INSTALL_PREFIX "/home/inubashiri/GM/nuc/GMaster_project/src/contact/install/contact")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

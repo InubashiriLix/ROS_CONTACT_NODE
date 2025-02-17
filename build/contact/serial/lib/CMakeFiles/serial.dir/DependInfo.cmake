@@ -8,13 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/orangepi/GM/nuc/GMaster_project/src/contact/serial/lib/src/impl/list_ports/list_ports_linux.cc" "serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o.d"
-  "/home/orangepi/GM/nuc/GMaster_project/src/contact/serial/lib/src/impl/unix.cc" "serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o.d"
-  "/home/orangepi/GM/nuc/GMaster_project/src/contact/serial/lib/src/serial.cc" "serial/lib/CMakeFiles/serial.dir/src/serial.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/serial.cc.o.d"
+  "/home/inubashiri/GM/nuc/GMaster_project/src/contact/serial/lib/src/impl/list_ports/list_ports_linux.cc" "serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o.d"
+  "/home/inubashiri/GM/nuc/GMaster_project/src/contact/serial/lib/src/impl/unix.cc" "serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o.d"
+  "/home/inubashiri/GM/nuc/GMaster_project/src/contact/serial/lib/src/serial.cc" "serial/lib/CMakeFiles/serial.dir/src/serial.cc.o" "gcc" "serial/lib/CMakeFiles/serial.dir/src/serial.cc.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
