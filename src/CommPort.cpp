@@ -1,4 +1,5 @@
 #include "CommPort.h"
+#include "Checksum.h"
 
 CommPort::CommPort() {
   char *device = "/dev/ttyACM0";
@@ -34,8 +35,8 @@ void CommPort::Read() {
     try {
       if (port_.read(rx_buffer_, sizeof(rx_buffer_)) != 0) {
         switch (rx_buffer_[0]) {
-        case 0xA5: {
-          RxHandler_slow();
+        case 0x3A: {
+          RxHandler();
 //                        write_clear_flag_ = false;
 #ifdef USE_DEBUG_SETTINGS
           auto start = std::chrono::high_resolution_clock::now();
@@ -53,7 +54,6 @@ void CommPort::Read() {
         }
 
         case 0xF8: {
-          RxHandler_fast();
           break;
         }
 
@@ -100,7 +100,6 @@ void CommPort::Write(const uint8_t *tx_packet, size_t size, bool safe_write) {
 }
 
 // sentry only
-// 废物函数，一用就segmentation fault
 void CommPort::RunAsync(SERIAL_MODE mode) {
   if (mode == TX_SYNC) {
     logger_->info("Serial mode: TX_SYNC");
@@ -158,14 +157,71 @@ void CommPort::SerialFailsafeCallback(bool reopen) {
   exception_handled_flag_ = true;
 }
 
-void CommPort::RxHandler_slow() {
-  if (Crc8Verify(rx_buffer_, sizeof(ProjectileRx_slow))) {
-    memcpy(&rx_struct_slow_, rx_buffer_, sizeof(ProjectileRx_slow));
+// rx: receive
+// tx: transport
+void CommPort::RxHandler() {
+  // if (Crc8Verify(rx_buffer_, sizeof(ProjectileRx))) {
+  //   memcpy(&rx_struct_, rx_buffer_, sizeof(ProjectileRx));
+  // }
+  // the infantryDL is not using CRC8 for now
+  memcpy(&rx_struct_, rx_buffer_, sizeof(ProjectileRx));
+}
+
+float CommPort::get_rx_Pitch() { return this->rx_struct_.pitch; }
+
+float CommPort::get_rx_Yaw() { return this->rx_struct_.yaw; }
+
+void CommPort::get_rx_quaternion(float *q_) {
+  for (int i = 0; i < 4; i++) {
+    q_[i] = this->rx_struct_.q[i];
   }
 }
 
-void CommPort::RxHandler_fast() {
-  if (Crc8Verify(rx_buffer_, sizeof(ProjectileRx_fast))) {
-    memcpy(&rx_struct_fast_, rx_buffer_, sizeof(ProjectileRx_fast));
-  }
+uint8_t CommPort::get_rx_color() { return this->rx_struct_.color; }
+
+uint8_t CommPort::get_rx_autoaim_mode() {
+  return this->rx_struct_.auto_aim_mode;
+}
+
+uint8_t CommPort::get_rx_shoot_decision() {
+  return this->rx_struct_.shoot_decision;
+}
+
+void CommPort::set_tx_header(uint8_t header) {
+  this->tx_struct_.header = header;
+}
+
+void CommPort::set_tx_pitch(float pitch) { this->tx_struct_.pitch = pitch; }
+
+void CommPort::set_tx_yaw(float yaw) { this->tx_struct_.yaw = yaw; }
+
+void CommPort::set_tx_found(uint8_t found) { this->tx_struct_.found = found; }
+
+void CommPort::set_tx_shoot_or_not(uint8_t shoot_or_not) {
+  this->tx_struct_.shoot_or_not = shoot_or_not;
+}
+
+void CommPort::set_tx_done_fitting(uint8_t done_fitting) {
+  this->tx_struct_.done_fitting = done_fitting;
+}
+
+void CommPort::set_tx_patrolling(uint8_t patrolling) {
+  this->tx_struct_.patrolling = patrolling;
+}
+
+void CommPort::set_tx_is_updated(uint8_t is_updated) {
+  this->tx_struct_.is_updated = is_updated;
+}
+
+void CommPort::set_tx_checksum(uint8_t checksum) {
+  this->tx_struct_.checksum = checksum;
+}
+
+CommPort::ProjectileTx CommPort::get_tx_struct() { return this->tx_struct_; }
+
+uint8_t *CommPort::get_tx_buffer() {
+  static uint8_t tx_buffer[32];
+  memcpy(tx_buffer, &tx_struct_, sizeof(tx_struct_));
+  Crc8Append(tx_buffer, sizeof(tx_buffer));
+  return tx_buffer;
 }

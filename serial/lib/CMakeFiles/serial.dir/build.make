@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact
+CMAKE_SOURCE_DIR = //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact
+CMAKE_BINARY_DIR = //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact
 
 # Include any dependencies generated for this target.
 include serial/lib/CMakeFiles/serial.dir/depend.make
@@ -72,44 +72,44 @@ include serial/lib/CMakeFiles/serial.dir/flags.make
 serial/lib/CMakeFiles/serial.dir/src/serial.cc.o: serial/lib/CMakeFiles/serial.dir/flags.make
 serial/lib/CMakeFiles/serial.dir/src/serial.cc.o: serial/lib/src/serial.cc
 serial/lib/CMakeFiles/serial.dir/src/serial.cc.o: serial/lib/CMakeFiles/serial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/serial.cc.o"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/serial.cc.o -MF CMakeFiles/serial.dir/src/serial.cc.o.d -o CMakeFiles/serial.dir/src/serial.cc.o -c /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/serial.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/serial.cc.o"
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/serial.cc.o -MF CMakeFiles/serial.dir/src/serial.cc.o.d -o CMakeFiles/serial.dir/src/serial.cc.o -c //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/serial.cc
 
 serial/lib/CMakeFiles/serial.dir/src/serial.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial.dir/src/serial.cc.i"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/serial.cc > CMakeFiles/serial.dir/src/serial.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/serial.cc > CMakeFiles/serial.dir/src/serial.cc.i
 
 serial/lib/CMakeFiles/serial.dir/src/serial.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial.dir/src/serial.cc.s"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/serial.cc -o CMakeFiles/serial.dir/src/serial.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/serial.cc -o CMakeFiles/serial.dir/src/serial.cc.s
 
 serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o: serial/lib/CMakeFiles/serial.dir/flags.make
 serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o: serial/lib/src/impl/unix.cc
 serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o: serial/lib/CMakeFiles/serial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o -MF CMakeFiles/serial.dir/src/impl/unix.cc.o.d -o CMakeFiles/serial.dir/src/impl/unix.cc.o -c /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/unix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o"
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o -MF CMakeFiles/serial.dir/src/impl/unix.cc.o.d -o CMakeFiles/serial.dir/src/impl/unix.cc.o -c //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/unix.cc
 
 serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial.dir/src/impl/unix.cc.i"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/unix.cc > CMakeFiles/serial.dir/src/impl/unix.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/unix.cc > CMakeFiles/serial.dir/src/impl/unix.cc.i
 
 serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial.dir/src/impl/unix.cc.s"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/unix.cc -o CMakeFiles/serial.dir/src/impl/unix.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/unix.cc -o CMakeFiles/serial.dir/src/impl/unix.cc.s
 
 serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o: serial/lib/CMakeFiles/serial.dir/flags.make
 serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o: serial/lib/src/impl/list_ports/list_ports_linux.cc
 serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o: serial/lib/CMakeFiles/serial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o -MF CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o.d -o CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o -c /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/list_ports/list_ports_linux.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o -MF CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o.d -o CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o -c //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/list_ports/list_ports_linux.cc
 
 serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/list_ports/list_ports_linux.cc > CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/list_ports/list_ports_linux.cc > CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
 
 serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/src/impl/list_ports/list_ports_linux.cc -o CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/src/impl/list_ports/list_ports_linux.cc -o CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
 
 # Object files for target serial
 serial_OBJECTS = \
@@ -125,19 +125,19 @@ serial/lib/libserial.a: serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o
 serial/lib/libserial.a: serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o
 serial/lib/libserial.a: serial/lib/CMakeFiles/serial.dir/build.make
 serial/lib/libserial.a: serial/lib/CMakeFiles/serial.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libserial.a"
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && $(CMAKE_COMMAND) -P CMakeFiles/serial.dir/cmake_clean_target.cmake
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libserial.a"
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && $(CMAKE_COMMAND) -P CMakeFiles/serial.dir/cmake_clean_target.cmake
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 serial/lib/CMakeFiles/serial.dir/build: serial/lib/libserial.a
 .PHONY : serial/lib/CMakeFiles/serial.dir/build
 
 serial/lib/CMakeFiles/serial.dir/clean:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib && $(CMAKE_COMMAND) -P CMakeFiles/serial.dir/cmake_clean.cmake
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib && $(CMAKE_COMMAND) -P CMakeFiles/serial.dir/cmake_clean.cmake
 .PHONY : serial/lib/CMakeFiles/serial.dir/clean
 
 serial/lib/CMakeFiles/serial.dir/depend:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/CMakeFiles/serial.dir/DependInfo.cmake --color=$(COLOR)
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/CMakeFiles/serial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/lib/CMakeFiles/serial.dir/depend
 

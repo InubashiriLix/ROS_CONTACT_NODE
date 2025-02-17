@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(contact)
+project(contact_infantryDL)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -10,10 +10,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(nav_msgs REQUIRED)
+find_package(gary_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(sentry_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
 
 find_package(spdlog REQUIRED)
 
@@ -40,10 +38,8 @@ target_link_libraries(
 ament_target_dependencies(
   contact
   rclcpp
-  nav_msgs
-  sentry_msgs
+  gary_msgs
   sensor_msgs
-  geometry_msgs
 )
 
 install(

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact
+CMAKE_SOURCE_DIR = //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact
+CMAKE_BINARY_DIR = //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib//CMakeFiles/progress.marks
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/CMakeFiles 0
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(CMAKE_COMMAND) -E cmake_progress_start //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib//CMakeFiles/progress.marks
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/clean
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/preinstall
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/preinstall
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 serial/lib/CMakeFiles/serial.dir/rule:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/CMakeFiles/serial.dir/rule
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial/lib/CMakeFiles/serial.dir/rule
 .PHONY : serial/lib/CMakeFiles/serial.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ serial: serial/lib/CMakeFiles/serial.dir/rule
 
 # fast build rule for target.
 serial/fast:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/build
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/build
 .PHONY : serial/fast
 
 src/impl/list_ports/list_ports_linux.o: src/impl/list_ports/list_ports_linux.cc.o
@@ -190,7 +190,7 @@ src/impl/list_ports/list_ports_linux.o: src/impl/list_ports/list_ports_linux.cc.
 
 # target to build an object file
 src/impl/list_ports/list_ports_linux.cc.o:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o
 .PHONY : src/impl/list_ports/list_ports_linux.cc.o
 
 src/impl/list_ports/list_ports_linux.i: src/impl/list_ports/list_ports_linux.cc.i
@@ -198,7 +198,7 @@ src/impl/list_ports/list_ports_linux.i: src/impl/list_ports/list_ports_linux.cc.
 
 # target to preprocess a source file
 src/impl/list_ports/list_ports_linux.cc.i:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
 .PHONY : src/impl/list_ports/list_ports_linux.cc.i
 
 src/impl/list_ports/list_ports_linux.s: src/impl/list_ports/list_ports_linux.cc.s
@@ -206,7 +206,7 @@ src/impl/list_ports/list_ports_linux.s: src/impl/list_ports/list_ports_linux.cc.
 
 # target to generate assembly for a file
 src/impl/list_ports/list_ports_linux.cc.s:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
 .PHONY : src/impl/list_ports/list_ports_linux.cc.s
 
 src/impl/unix.o: src/impl/unix.cc.o
@@ -214,7 +214,7 @@ src/impl/unix.o: src/impl/unix.cc.o
 
 # target to build an object file
 src/impl/unix.cc.o:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.o
 .PHONY : src/impl/unix.cc.o
 
 src/impl/unix.i: src/impl/unix.cc.i
@@ -222,7 +222,7 @@ src/impl/unix.i: src/impl/unix.cc.i
 
 # target to preprocess a source file
 src/impl/unix.cc.i:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.i
 .PHONY : src/impl/unix.cc.i
 
 src/impl/unix.s: src/impl/unix.cc.s
@@ -230,7 +230,7 @@ src/impl/unix.s: src/impl/unix.cc.s
 
 # target to generate assembly for a file
 src/impl/unix.cc.s:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/impl/unix.cc.s
 .PHONY : src/impl/unix.cc.s
 
 src/serial.o: src/serial.cc.o
@@ -238,7 +238,7 @@ src/serial.o: src/serial.cc.o
 
 # target to build an object file
 src/serial.cc.o:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.o
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.o
 .PHONY : src/serial.cc.o
 
 src/serial.i: src/serial.cc.i
@@ -246,7 +246,7 @@ src/serial.i: src/serial.cc.i
 
 # target to preprocess a source file
 src/serial.cc.i:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.i
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.i
 .PHONY : src/serial.cc.i
 
 src/serial.s: src/serial.cc.s
@@ -254,7 +254,7 @@ src/serial.s: src/serial.cc.s
 
 # target to generate assembly for a file
 src/serial.cc.s:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.s
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(MAKE) $(MAKESILENT) -f serial/lib/CMakeFiles/serial.dir/build.make serial/lib/CMakeFiles/serial.dir/src/serial.cc.s
 .PHONY : src/serial.cc.s
 
 # Help Target
@@ -291,6 +291,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

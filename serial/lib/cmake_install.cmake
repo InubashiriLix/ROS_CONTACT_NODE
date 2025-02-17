@@ -1,4 +1,4 @@
-# Install script for directory: /home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib
+# Install script for directory: //home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

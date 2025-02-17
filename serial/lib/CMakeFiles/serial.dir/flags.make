@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/include -I/home/orangepi/GM/nuc_sentry/GMaster_project/src/contact/serial/lib/include
+CXX_INCLUDES = -I//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/include -I//home/orangepi/GM/nuc/GMaster_project/src/Infantry_contact/serial/lib/include
 
 CXX_FLAGS =  -pthread -Wall -Wextra -Wpedantic
 
