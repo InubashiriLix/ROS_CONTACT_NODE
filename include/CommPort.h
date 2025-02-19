@@ -14,6 +14,12 @@
 
 constexpr size_t packet_size = 15;
 
+#define PROJECTILE_RX_SOF 0xA5
+#define PROJECTILE_RX_SIZE 49
+
+#define PROJECTILE_TX_SOF 0x5A
+#define PROJECTILE_TX_SIZE 11
+
 struct TxPacket {
   unsigned char cache[packet_size];
 
@@ -29,18 +35,19 @@ struct TxPacket {
 
 class CommPort {
 private:
-  // NOTE: the structure is changed
   typedef struct ProjectileRx {
-    uint8_t header; // 0xA3 for InfantryDL
-    float roll;
-    float pitch;
-    float yaw;
-    float q[4];
-    uint8_t color;
-    uint8_t auto_aim_mode;
-    uint8_t shoot_decision;
-    uint8_t EOF_; // 0xAA for InfantryDL // EOF_ not EOF (variable name)
-  } __attribute__((packed));
+    uint8_t SOF;              // 0
+    float INS_quat_vision[4]; // 1 - 16
+    uint8_t vision_mode;      // 17
+    uint8_t reserved_1;       // 18 0xFF
+    uint8_t is_self_team_red; // bool. 19, 1: red, 0: blue
+    float buller_speed;       // 20 - 23  NOTE: buller NOT bullet
+    uint8_t hp_data[11];      // 24 - 38
+    uint32_t system_time;     // 39 - 42
+    float pitch;              // 40 - 43
+    float yaw;                // 44 - 47
+    uint8_t crc8_check_sum;   // 48
+  } __attribute__((packed)) ProjectileRx;
 
   ProjectileRx rx_struct_{};
 
@@ -50,17 +57,12 @@ private:
   std::atomic<bool> exception_handled_flag_{};
 
   typedef struct ProjectileTx {
-    // WARNING:: the found, patrolling, done_fitting, is_updated are not clear
-    uint8_t header; // 0xA3 for InfantryDL
-    float pitch;
-    float yaw;
-    uint8_t found;
-    uint8_t shoot_or_not;
-    uint8_t done_fitting;
-    uint8_t patrolling; // 0xAA for InfantryDL // EOF_ not EOF (variable name)
-    uint8_t is_updated;
-    uint8_t checksum;
-  } __attribute__((packed));
+    uint8_t SOF;          // 0
+    uint8_t target_found; // 1
+    float pitch_angle;    // 2 - 5
+    float yaw_angle;      // 6 - 9
+    uint8_t checksum;     // 10
+  } __attribute__((packed)) ProjectileTx;
 
   ProjectileTx tx_struct_{};
 
@@ -73,6 +75,8 @@ private:
   std::string device_desc_;
 
 public:
+  size_t tx_struct_len = sizeof(ProjectileTx);
+
   enum SERIAL_MODE { TX_SYNC, TX_RX_ASYNC };
 
   CommPort();
@@ -93,43 +97,25 @@ public:
 
   void SerialFailsafeCallback(bool reopen);
 
-  // for RX APIS
-  float get_rx_Roll();
+  // NOTE: for RX APIS
+  uint8_t get_rx_SOF();
+  float *get_rx_quat();
+  uint8_t get_rx_vision_mode();
+  uint8_t get_rx_is_self_team_red();
+  float get_rx_buller_speed();
+  uint8_t *get_rx_hp_data();
+  uint32_t get_rx_system_time();
+  float get_rx_pitch();
+  float get_rx_yaw();
+  uint8_t get_rx_crc8_check_sum();
 
-  float get_rx_Pitch();
-
-  float get_rx_Yaw();
-
-  void get_rx_quaternion(float *q_);
-
-  uint8_t get_rx_color();
-
-  uint8_t get_rx_autoaim_mode();
-
-  uint8_t get_rx_shoot_decision();
-
-  // for TX APIS
-  void set_tx_header(uint8_t header);
-
-  void set_tx_pitch(float pitch);
-
-  void set_tx_yaw(float yaw);
-
-  void set_tx_found(uint8_t found);
-
-  void set_tx_shoot_or_not(uint8_t shoot_or_not);
-
-  void set_tx_done_fitting(uint8_t done_fitting);
-
-  void set_tx_patrolling(uint8_t patrolling);
-
-  void set_tx_is_updated(uint8_t is_updated);
-
-  void set_tx_checksum(uint8_t checksum);
-
-  ProjectileTx get_tx_struct();
-
-  uint8_t tx_struct_len = (uint8_t)sizeof(tx_struct_);
+  // NOTE: for TX APIS
+  void set_tx_SOF(uint8_t new_SOF);
+  void set_tx_target_found(uint8_t new_target_found);
+  void set_tx_pitch_angle(float new_pitch_angle);
+  void set_tx_yaw_angle(float new_yaw_angle);
+  void set_tx_checksum(uint8_t new_checksum);
+  CommPort::ProjectileTx get_tx_struct();
 
   uint8_t *get_tx_buffer();
 };

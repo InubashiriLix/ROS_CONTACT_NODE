@@ -35,7 +35,7 @@ void CommPort::Read() {
     try {
       if (port_.read(rx_buffer_, sizeof(rx_buffer_)) != 0) {
         switch (rx_buffer_[0]) {
-        case 0x3A: {
+        case PROJECTILE_TX_SOF: {
           RxHandler();
 //                        write_clear_flag_ = false;
 #ifdef USE_DEBUG_SETTINGS
@@ -160,6 +160,8 @@ void CommPort::SerialFailsafeCallback(bool reopen) {
 // rx: receive
 // tx: transport
 void CommPort::RxHandler() {
+  // TODO: add CRC8 verification
+  //
   // if (Crc8Verify(rx_buffer_, sizeof(ProjectileRx))) {
   //   memcpy(&rx_struct_, rx_buffer_, sizeof(ProjectileRx));
   // }
@@ -167,54 +169,46 @@ void CommPort::RxHandler() {
   memcpy(&rx_struct_, rx_buffer_, sizeof(ProjectileRx));
 }
 
-float CommPort::get_rx_Pitch() { return this->rx_struct_.pitch; }
+// NOTE: FOR RX
+uint8_t CommPort::get_rx_SOF() { return this->rx_struct_.SOF; }
 
-float CommPort::get_rx_Yaw() { return this->rx_struct_.yaw; }
+float *CommPort::get_rx_quat() { return this->rx_struct_.INS_quat_vision; }
 
-void CommPort::get_rx_quaternion(float *q_) {
-  for (int i = 0; i < 4; i++) {
-    q_[i] = this->rx_struct_.q[i];
-  }
+uint8_t CommPort::get_rx_vision_mode() { return this->rx_struct_.vision_mode; }
+
+uint8_t CommPort::get_rx_is_self_team_red() {
+  return this->rx_struct_.is_self_team_red;
 }
 
-uint8_t CommPort::get_rx_color() { return this->rx_struct_.color; }
+float CommPort::get_rx_buller_speed() { return this->rx_struct_.buller_speed; }
 
-uint8_t CommPort::get_rx_autoaim_mode() {
-  return this->rx_struct_.auto_aim_mode;
+uint8_t *CommPort::get_rx_hp_data() { return this->rx_struct_.hp_data; }
+
+uint32_t CommPort::get_rx_system_time() { return this->rx_struct_.system_time; }
+
+float CommPort::get_rx_pitch() { return this->rx_struct_.pitch; }
+
+float CommPort::get_rx_yaw() { return this->rx_struct_.yaw; }
+
+uint8_t CommPort::get_rx_crc8_check_sum() {
+  return this->rx_struct_.crc8_check_sum;
 }
 
-uint8_t CommPort::get_rx_shoot_decision() {
-  return this->rx_struct_.shoot_decision;
+// NOTE: FOR TX
+void CommPort::set_tx_SOF(uint8_t new_SOF) { this->tx_struct_.SOF = new_SOF; }
+void CommPort::set_tx_target_found(uint8_t new_target_found) {
+  this->tx_struct_.target_found = new_target_found;
+}
+void CommPort::set_tx_pitch_angle(float new_pitch_angle) {
+  this->tx_struct_.pitch_angle = new_pitch_angle;
 }
 
-void CommPort::set_tx_header(uint8_t header) {
-  this->tx_struct_.header = header;
+void CommPort::set_tx_yaw_angle(float new_yaw_angle) {
+  this->tx_struct_.yaw_angle = new_yaw_angle;
 }
 
-void CommPort::set_tx_pitch(float pitch) { this->tx_struct_.pitch = pitch; }
-
-void CommPort::set_tx_yaw(float yaw) { this->tx_struct_.yaw = yaw; }
-
-void CommPort::set_tx_found(uint8_t found) { this->tx_struct_.found = found; }
-
-void CommPort::set_tx_shoot_or_not(uint8_t shoot_or_not) {
-  this->tx_struct_.shoot_or_not = shoot_or_not;
-}
-
-void CommPort::set_tx_done_fitting(uint8_t done_fitting) {
-  this->tx_struct_.done_fitting = done_fitting;
-}
-
-void CommPort::set_tx_patrolling(uint8_t patrolling) {
-  this->tx_struct_.patrolling = patrolling;
-}
-
-void CommPort::set_tx_is_updated(uint8_t is_updated) {
-  this->tx_struct_.is_updated = is_updated;
-}
-
-void CommPort::set_tx_checksum(uint8_t checksum) {
-  this->tx_struct_.checksum = checksum;
+void CommPort::set_tx_checksum(uint8_t new_checksum) {
+  this->tx_struct_.checksum = new_checksum;
 }
 
 CommPort::ProjectileTx CommPort::get_tx_struct() { return this->tx_struct_; }
