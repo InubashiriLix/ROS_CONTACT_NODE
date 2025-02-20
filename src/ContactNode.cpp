@@ -58,6 +58,11 @@ public:
 
       comm.Write(comm.get_tx_buffer(), comm.tx_struct_len, true);
       flag_new_autoaim_msg = 0;
+      // NOTE: reset the angle in case of out of controlling when no message is
+      // sended
+      comm.set_tx_pitch_angle(comm.get_rx_pitch());
+      comm.set_tx_yaw_angle(comm.get_rx_yaw());
+      comm.set_tx_target_found(0);
     }
   }
 

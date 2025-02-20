@@ -161,7 +161,6 @@ void CommPort::SerialFailsafeCallback(bool reopen) {
 // tx: transport
 void CommPort::RxHandler() {
   // TODO: add CRC8 verification
-  //
   // if (Crc8Verify(rx_buffer_, sizeof(ProjectileRx))) {
   //   memcpy(&rx_struct_, rx_buffer_, sizeof(ProjectileRx));
   // }
