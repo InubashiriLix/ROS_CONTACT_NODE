@@ -35,7 +35,7 @@ void CommPort::Read() {
     try {
       if (port_.read(rx_buffer_, sizeof(rx_buffer_)) != 0) {
         switch (rx_buffer_[0]) {
-        case PROJECTILE_TX_SOF: {
+        case PROJECTILE_RX_SOF: {
           RxHandler();
 //                        write_clear_flag_ = false;
 #ifdef USE_DEBUG_SETTINGS

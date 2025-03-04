@@ -1,4 +1,3 @@
-
 #include <CommPort.h>
 #include <gary_msgs/msg/auto_aim.hpp>
 #include <geometry_msgs/msg/quaternion.hpp>
@@ -50,7 +49,7 @@ public:
       RCLCPP_INFO(this->get_logger(),
                   "===================== SENDING =====================");
 
-      comm.set_tx_SOF(0xA3);
+      comm.set_tx_SOF(PROJECTILE_TX_SOF);
 
       RCLCPP_INFO(this->get_logger(), "Pitch: %f, Yaw: %f",
                   comm.get_tx_struct().pitch_angle,

@@ -14,10 +14,10 @@
 
 constexpr size_t packet_size = 15;
 
-#define PROJECTILE_RX_SOF 0xA5
+#define PROJECTILE_RX_SOF 0xA5 // lower mechine -> upper mechine
 #define PROJECTILE_RX_SIZE 49
 
-#define PROJECTILE_TX_SOF 0x5A
+#define PROJECTILE_TX_SOF 0x5A // upper mechine -> lower mechine
 #define PROJECTILE_TX_SIZE 11
 
 struct TxPacket {
@@ -57,7 +57,7 @@ private:
   std::atomic<bool> exception_handled_flag_{};
 
   typedef struct ProjectileTx {
-    uint8_t SOF;          // 0
+    uint8_t SOF;          // 0 // NOTE: 0x5A
     uint8_t target_found; // 1
     float pitch_angle;    // 2 - 5
     float yaw_angle;      // 6 - 9
