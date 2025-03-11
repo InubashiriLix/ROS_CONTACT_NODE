@@ -31,3 +31,11 @@
   } __attribute__((packed)) ProjectileTx;
 
 ```
+
+### about the upper and lower camera
+
+- topic name /camera_id
+- std_msgs::msg::Int32
+
+_temporarily we constraint the current cam is 1_
+_the lower mechine logic is still under development_
