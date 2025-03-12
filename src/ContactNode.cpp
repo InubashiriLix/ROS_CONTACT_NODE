@@ -111,8 +111,8 @@ class ContactNode : public rclcpp::Node {
         // TODO: for lower mechine: add the upper or lower camera state variable
         // we constraint 1 for upper cam, 0 for lower cam
         std_msgs::msg::Int32 camera_id_msg;
-        // camera_id_msg.data = comm.get_rx_camera_id();
-        camera_id_msg.data = 1;
+        camera_id_msg.data = comm.get_rx_camera_id();
+        // camera_id_msg.data = 1;
         _camera_id_pub_->publish(camera_id_msg);
         RCLCPP_INFO(this->get_logger(), "current cam: %s",
                     ((camera_id_msg.data == 1) ? "upper cam" : "lower cam"));
